@@ -1,1 +1,2 @@
 # API-Anomaly-Detection-MLOPS
+This project is the the follow on (https://github.com/ris2002/Fraud-Credit-Card-detection-MLOPS.git) I had some errors in that project and my goal is to implemnnet the same architeccture from that project.
