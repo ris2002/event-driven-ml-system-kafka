@@ -4,6 +4,9 @@ from airflow.decorators import task,dag
 
 
 
+
+
+
 @dag(dag_id='dag_train_pipeline', schedule='@once')
 def training_pipeline():
     csv_path='/opt/airflow/Dataset_Folder/fake_job_postings.csv'
