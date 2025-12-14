@@ -3,10 +3,12 @@ import pandas as pd
 import pickle
 from airflow.decorators import task
 
+
+
 @task
 def ingest_csv(csv_path)->pd.DataFrame:
     try:
-        
+
         df=pd.read_csv(csv_path)
         with open('/opt/airflow/config/dataset.pkl','wb') as f:
             pickle.dump(df,f)
