@@ -8,3 +8,4 @@ dotenv
 ipykernel
 imbalanced-learn
 dvc
+nltk

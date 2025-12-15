@@ -2,3 +2,5 @@ my_env
 .env
 config/
 Dataset_Folder/
+/config
+/Dataset_Folder
