@@ -73,3 +73,8 @@ Simplifies preprocessing for datasets with mixed features.
 Ensures ML models receive a single numeric feature matrix.
 
 Reduces manual concatenation or errors in feature preparation.
+
+## Models used 
+* KNN
+* Decision Trees
+* XGBOOST
