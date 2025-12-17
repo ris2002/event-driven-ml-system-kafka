@@ -1,0 +1,23 @@
+{"timestamp":"2025-12-17T15:06:22.378782Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-17T15:06:22.382862Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/training_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-17T15:06:25.215229Z","level":"error","event":"[nltk_data] Downloading package stopwords to","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:06:25.220351Z","level":"error","event":"[nltk_data]     /home/airflow/nltk_data...","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:06:25.221637Z","level":"error","event":"[nltk_data]   Package stopwords is already up-to-date!","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:06:27.322711Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/data_ingestion.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:06:27.323171Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/data_cleaner.py","lineno":1,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:06:27.323458Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/training_pipeline.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:06:27.323972Z","level":"warning","event":"The `airflow.decorators.dag` attribute is deprecated. Please use `'airflow.sdk.dag'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/training_pipeline.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:06:27.324788Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/model_trainer.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:06:27.371429Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:06:27.372412Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:06:27.373266Z","level":"info","event":"Current task name:model_training","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:06:27.374392Z","level":"info","event":"Dag name:dag_train_pipeline","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:06:29.690350Z","level":"error","event":"2025/12/17 15:06:29 INFO mlflow.tracking.fluent: Experiment with name 'fake_job_posting' does not exist. Creating a new experiment.","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:06:29.815136Z","level":"error","event":"Error in training the KNN classifier classifier","logger":"root","filename":"helper_trainer.py","lineno":30}
+{"timestamp":"2025-12-17T15:06:29.815561Z","level":"info","event":"Successfully Trained KNN model","logger":"root","filename":"model_trainer.py","lineno":28}
+{"timestamp":"2025-12-17T15:06:29.815832Z","level":"error","event":"Error in training the deciasion tree classifier","logger":"root","filename":"helper_trainer.py","lineno":22}
+{"timestamp":"2025-12-17T15:06:29.816135Z","level":"info","event":"Successfully Trained Decision Tree model","logger":"root","filename":"model_trainer.py","lineno":30}
+{"timestamp":"2025-12-17T15:06:29.823362Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":215}
+{"timestamp":"2025-12-17T15:06:29.861841Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:06:29.862997Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:06:29.864435Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): model_training>","logger":"task.stdout"}

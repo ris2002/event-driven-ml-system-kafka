@@ -1,0 +1,19 @@
+{"timestamp":"2025-12-17T15:01:44.795504Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-17T15:01:44.799008Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/training_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-17T15:01:54.526694Z","level":"error","event":"[nltk_data] Downloading package stopwords to","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:01:54.527656Z","level":"error","event":"[nltk_data]     /home/airflow/nltk_data...","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:01:54.577157Z","level":"error","event":"[nltk_data]   Unzipping corpora/stopwords.zip.","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:01:58.861923Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/data_ingestion.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:01:58.862197Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/data_cleaner.py","lineno":1,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:01:58.862343Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/training_pipeline.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:01:58.862574Z","level":"warning","event":"The `airflow.decorators.dag` attribute is deprecated. Please use `'airflow.sdk.dag'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/training_pipeline.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:01:58.862955Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/model_trainer.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:01:58.991088Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:01:58.992117Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:01:58.993014Z","level":"info","event":"Current task name:ingest_csv","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:01:58.993916Z","level":"info","event":"Dag name:dag_train_pipeline","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:02:05.209413Z","level":"info","event":"Successful in ingesting the csv file","logger":"root","filename":"data_ingestion.py","lineno":15}
+{"timestamp":"2025-12-17T15:02:05.221210Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":215}
+{"timestamp":"2025-12-17T15:02:05.297183Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:02:05.298259Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:02:05.299338Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): ingest_csv>","logger":"task.stdout"}

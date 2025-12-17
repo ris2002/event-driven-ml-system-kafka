@@ -1,0 +1,22 @@
+{"timestamp":"2025-12-17T15:15:00.945595Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-17T15:15:00.947133Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/training_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-17T15:15:03.628494Z","level":"error","event":"[nltk_data] Downloading package stopwords to","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:15:03.629646Z","level":"error","event":"[nltk_data]     /home/airflow/nltk_data...","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:15:03.630622Z","level":"error","event":"[nltk_data]   Package stopwords is already up-to-date!","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:15:04.779569Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/data_ingestion.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:15:04.779827Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/data_cleaner.py","lineno":1,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:15:04.779960Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/training_pipeline.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:15:04.780081Z","level":"warning","event":"The `airflow.decorators.dag` attribute is deprecated. Please use `'airflow.sdk.dag'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/training_pipeline.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:15:04.780196Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/model_trainer.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:15:04.807402Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:15:04.808047Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:15:04.808764Z","level":"info","event":"Current task name:model_training","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:15:04.809347Z","level":"info","event":"Dag name:dag_train_pipeline","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:15:05.458772Z","level":"error","event":"Error in training the KNN classifier classifier","logger":"root","filename":"helper_trainer.py","lineno":30}
+{"timestamp":"2025-12-17T15:15:05.459159Z","level":"info","event":"Successfully Trained KNN model","logger":"root","filename":"model_trainer.py","lineno":28}
+{"timestamp":"2025-12-17T15:15:05.459485Z","level":"error","event":"Error in training the deciasion tree classifier","logger":"root","filename":"helper_trainer.py","lineno":22}
+{"timestamp":"2025-12-17T15:15:05.459684Z","level":"info","event":"Successfully Trained Decision Tree model","logger":"root","filename":"model_trainer.py","lineno":30}
+{"timestamp":"2025-12-17T15:15:05.466553Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":215}
+{"timestamp":"2025-12-17T15:15:05.496227Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:15:05.497435Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:15:05.498654Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): model_training>","logger":"task.stdout"}

@@ -105,6 +105,15 @@ x-airflow-common:
       condition: service_healthy
 
 services:
+  mlflow-server:
+  
+    build:
+      context: .
+      dockerfile: Dockerfile.mlflow
+    ports:
+      - "5050:5050"
+    volumes:
+      - mlflow-data:/mlflow
   postgres:
     image: postgres:16
     environment:
@@ -352,3 +361,4 @@ services:
 
 volumes:
   postgres-db-volume:
+  mlflow-data:

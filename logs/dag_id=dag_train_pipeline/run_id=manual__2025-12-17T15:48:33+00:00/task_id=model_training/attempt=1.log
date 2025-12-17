@@ -1,0 +1,35 @@
+{"timestamp":"2025-12-17T15:51:57.011278Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-17T15:51:57.012975Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/training_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-17T15:51:58.898652Z","level":"error","event":"[nltk_data] Downloading package stopwords to","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:51:58.899511Z","level":"error","event":"[nltk_data]     /home/airflow/nltk_data...","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:51:58.900284Z","level":"error","event":"[nltk_data]   Package stopwords is already up-to-date!","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:51:59.822537Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/data_ingestion.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:51:59.822877Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/data_cleaner.py","lineno":1,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:51:59.823019Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/training_pipeline.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:51:59.823248Z","level":"warning","event":"The `airflow.decorators.dag` attribute is deprecated. Please use `'airflow.sdk.dag'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/training_pipeline.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:51:59.823423Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/model_trainer.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T15:51:59.871253Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:51:59.872656Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:51:59.873484Z","level":"info","event":"Current task name:model_training","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:51:59.873939Z","level":"info","event":"Dag name:dag_train_pipeline","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:52:01.717334Z","level":"error","event":"Error in training the KNN classifier classifier","logger":"root","filename":"helper_trainer.py","lineno":32}
+{"timestamp":"2025-12-17T15:52:01.717727Z","level":"info","event":"Successfully Trained KNN model","logger":"root","filename":"model_trainer.py","lineno":32}
+{"timestamp":"2025-12-17T15:52:01.834004Z","level":"info","event":"Decision Tree model is succcesssfully trained","logger":"root","filename":"helper_trainer.py","lineno":20}
+{"timestamp":"2025-12-17T15:52:01.834280Z","level":"info","event":"Successfully Trained Decision Tree model","logger":"root","filename":"model_trainer.py","lineno":34}
+{"timestamp":"2025-12-17T15:52:01.836018Z","level":"error","event":"2025/12/17 15:52:01 WARNING mlflow.sklearn: Model was missing function: predict. Not logging python_function flavor!","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:52:09.948847Z","level":"error","event":"2025/12/17 15:52:09 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:52:11.570863Z","level":"error","event":"Registered model 'knn_trained_model' already exists. Creating a new version of this model...","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:52:11.632502Z","level":"error","event":"2025/12/17 15:52:11 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for model version to finish creation. Model name: knn_trained_model, version 3","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:52:11.633210Z","level":"error","event":"Created version '3' of model 'knn_trained_model'.","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:52:17.040873Z","level":"error","event":"2025/12/17 15:52:17 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:52:18.085383Z","level":"error","event":"Registered model 'Decision_Trees_trained_model' already exists. Creating a new version of this model...","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:52:18.145786Z","level":"error","event":"2025/12/17 15:52:18 INFO mlflow.store.model_registry.abstract_store: Waiting up to 300 seconds for model version to finish creation. Model name: Decision_Trees_trained_model, version 3","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:52:18.146593Z","level":"error","event":"Created version '3' of model 'Decision_Trees_trained_model'.","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:52:18.147832Z","level":"info","event":"Successfully put the DT in a pkl file","logger":"root","filename":"model_trainer.py","lineno":47}
+{"timestamp":"2025-12-17T15:52:18.150592Z","level":"info","event":"Successfully put the knn_model in a pkl file","logger":"root","filename":"model_trainer.py","lineno":54}
+{"timestamp":"2025-12-17T15:52:18.175311Z","level":"error","event":"2025/12/17 15:52:18 INFO mlflow.tracking._tracking_service.client: 🏃 View run knn_trained_model at: http://host.docker.internal:5050/#/experiments/1/runs/6dd956bfe49a4586bc23c9712f268b7e.","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:52:18.176049Z","level":"error","event":"2025/12/17 15:52:18 INFO mlflow.tracking._tracking_service.client: 🧪 View experiment at: http://host.docker.internal:5050/#/experiments/1.","logger":"task.stderr"}
+{"timestamp":"2025-12-17T15:52:18.240923Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":215}
+{"timestamp":"2025-12-17T15:52:18.266885Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:52:18.267661Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-17T15:52:18.268413Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): model_training>","logger":"task.stdout"}

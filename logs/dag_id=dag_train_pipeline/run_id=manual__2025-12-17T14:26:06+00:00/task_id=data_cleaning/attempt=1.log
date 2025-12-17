@@ -1,0 +1,22 @@
+{"timestamp":"2025-12-17T14:27:23.507367Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-17T14:27:23.509719Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/training_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-17T14:27:26.141717Z","level":"error","event":"[nltk_data] Downloading package stopwords to","logger":"task.stderr"}
+{"timestamp":"2025-12-17T14:27:26.142609Z","level":"error","event":"[nltk_data]     /home/airflow/nltk_data...","logger":"task.stderr"}
+{"timestamp":"2025-12-17T14:27:26.143467Z","level":"error","event":"[nltk_data]   Package stopwords is already up-to-date!","logger":"task.stderr"}
+{"timestamp":"2025-12-17T14:27:27.330733Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/data_ingestion.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T14:27:27.331098Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/data_cleaner.py","lineno":1,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T14:27:27.331270Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/training_pipeline.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T14:27:27.331422Z","level":"warning","event":"The `airflow.decorators.dag` attribute is deprecated. Please use `'airflow.sdk.dag'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/training_pipeline.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T14:27:27.331597Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/model_trainer.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2025-12-17T14:27:27.359769Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T14:27:27.360571Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-17T14:27:27.361340Z","level":"info","event":"Current task name:data_cleaning","logger":"task.stdout"}
+{"timestamp":"2025-12-17T14:27:27.361968Z","level":"info","event":"Dag name:dag_train_pipeline","logger":"task.stdout"}
+{"timestamp":"2025-12-17T14:27:27.981614Z","level":"info","event":"Basic pre-processinng like droping the cols, filling the na values are done ","logger":"root","filename":"helper_cleaner.py","lineno":31}
+{"timestamp":"2025-12-17T14:29:55.867499Z","level":"info","event":"Done Stemming","logger":"root","filename":"helper_cleaner.py","lineno":50}
+{"timestamp":"2025-12-17T14:30:16.512791Z","level":"info","event":"Sucessfully  Vectorizing or spliting data","logger":"root","filename":"helper_cleaner.py","lineno":85}
+{"timestamp":"2025-12-17T14:30:17.291217Z","level":"info","event":"Successfully stored train/test datasets in pickle files.","logger":"root","filename":"helper_cleaner.py","lineno":115}
+{"timestamp":"2025-12-17T14:30:17.294940Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":215}
+{"timestamp":"2025-12-17T14:30:17.317341Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-17T14:30:17.318073Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-17T14:30:17.318697Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): data_cleaning>","logger":"task.stdout"}
