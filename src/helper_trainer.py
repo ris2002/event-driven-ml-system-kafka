@@ -40,3 +40,4 @@ class XGBOOST_classifier(Model_Training):
             logging.info('XGBOOST_ classifier model is succcesssfully trained')
         except Exception as e:
             logging.error(f'Error in training the XGBOOST_ classifier classifier')
+            raise e

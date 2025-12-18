@@ -91,14 +91,6 @@ def model_training()->None:
 
         ''' 
         
-      
-        
-
-
-
-
-
-
         
     except Exception as e :
         logging.error(f'Error training the model:{e}')

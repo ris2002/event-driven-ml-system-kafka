@@ -1,0 +1,23 @@
+{"timestamp":"2025-12-18T22:38:57.436128Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":179}
+{"timestamp":"2025-12-18T22:38:57.438085Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/training_pipeline.py","logger":"airflow.models.dagbag.DagBag","filename":"dagbag.py","lineno":593}
+{"timestamp":"2025-12-18T22:38:59.540511Z","level":"error","event":"[nltk_data] Downloading package stopwords to","logger":"task.stderr"}
+{"timestamp":"2025-12-18T22:38:59.541678Z","level":"error","event":"[nltk_data]     /home/airflow/nltk_data...","logger":"task.stderr"}
+{"timestamp":"2025-12-18T22:38:59.542759Z","level":"error","event":"[nltk_data]   Package stopwords is already up-to-date!","logger":"task.stderr"}
+{"timestamp":"2025-12-18T22:39:00.560880Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/data_ingestion.py","lineno":4,"logger":"py.warnings"}
+{"timestamp":"2025-12-18T22:39:00.561184Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/data_cleaner.py","lineno":1,"logger":"py.warnings"}
+{"timestamp":"2025-12-18T22:39:00.561351Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/training_pipeline.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-12-18T22:39:00.561548Z","level":"warning","event":"The `airflow.decorators.dag` attribute is deprecated. Please use `'airflow.sdk.dag'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/dags/training_pipeline.py","lineno":3,"logger":"py.warnings"}
+{"timestamp":"2025-12-18T22:39:00.561787Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/model_trainer.py","lineno":5,"logger":"py.warnings"}
+{"timestamp":"2025-12-18T22:39:00.561946Z","level":"warning","event":"The `airflow.decorators.task` attribute is deprecated. Please use `'airflow.sdk.task'`.","category":"DeprecatedImportWarning","filename":"/opt/airflow/steps/model_evaluation.py","lineno":6,"logger":"py.warnings"}
+{"timestamp":"2025-12-18T22:39:00.590142Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2025-12-18T22:39:00.590982Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2025-12-18T22:39:00.591885Z","level":"info","event":"Current task name:data_cleaning","logger":"task.stdout"}
+{"timestamp":"2025-12-18T22:39:00.592546Z","level":"info","event":"Dag name:dag_train_pipeline","logger":"task.stdout"}
+{"timestamp":"2025-12-18T22:39:02.988488Z","level":"info","event":"Basic pre-processinng like droping the cols, filling the na values are done ","logger":"root","filename":"helper_cleaner.py","lineno":31}
+{"timestamp":"2025-12-18T22:41:30.884551Z","level":"info","event":"Done Stemming","logger":"root","filename":"helper_cleaner.py","lineno":50}
+{"timestamp":"2025-12-18T22:41:49.474767Z","level":"info","event":"Sucessfully  Vectorizing or spliting data","logger":"root","filename":"helper_cleaner.py","lineno":85}
+{"timestamp":"2025-12-18T22:41:49.999726Z","level":"info","event":"Successfully stored train/test datasets in pickle files.","logger":"root","filename":"helper_cleaner.py","lineno":115}
+{"timestamp":"2025-12-18T22:41:50.016413Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":215}
+{"timestamp":"2025-12-18T22:41:50.041230Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2025-12-18T22:41:50.042720Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2025-12-18T22:41:50.043770Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): data_cleaning>","logger":"task.stdout"}
