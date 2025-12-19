@@ -93,7 +93,7 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
     - ${AIRFLOW_PROJ_DIR:-.}/Dataset_Folder:/opt/airflow/Dataset_Folder
     - ${AIRFLOW_PROJ_DIR:-.}/steps:/opt/airflow/steps
-    - ${AIRFLOW_PROJ_DIR:-.}/Deplopment_Folder:/opt/airflow/Deplopment_Folder
+    
     - ${AIRFLOW_PROJ_DIR:-.}/src:/opt/airflow/src
 
   user: "${AIRFLOW_UID:-50000}:0"
@@ -106,7 +106,6 @@ x-airflow-common:
 
 services:
   mlflow-server:
-  
     build:
       context: .
       dockerfile: Dockerfile.mlflow
@@ -114,6 +113,30 @@ services:
       - "5050:5050"
     volumes:
       - mlflow-data:/mlflow
+  kafka:
+   image: confluentinc/cp-kafka:7.8.3
+   container_name: kafka 
+   ports:
+     - "9092:9092"
+   user: root
+   environment:
+     KAFKA_KRAFT_MODE: 'true'
+     CLUSTER_ID: "xHTYKjy7R561RlI0feSs_A"
+     KAFKA_NODE_ID: 1
+     KAFKA_PROCESS_ROLES: broker,controller
+     KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+     KAFKA_OFFSETS_TOPICS_REPLICATION_FACTOR: 1
+     KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+     KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
+     KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+     KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+     KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+     KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+     KAFKA_CONFLUENT_BALANCER_TOPIC_REPLICATION_FACTOR: 1
+     KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+     KAFKA_LOG_DIRS: /var/lib/kafka/kafka_data
+   volumes:
+     - kafka_kraft:/var/lib/kafka/kafka_data  
   postgres:
     image: postgres:16
     environment:
@@ -362,3 +385,4 @@ services:
 volumes:
   postgres-db-volume:
   mlflow-data:
+  kafka_kraft:

@@ -78,3 +78,6 @@ Reduces manual concatenation or errors in feature preparation.
 * KNN
 * Decision Trees
 * XGBOOST
+## Correctios made to make Kafka work
+* The kafka converts the data to bytes it cannot read python or ndarray so it needs to be coverted to list
+* while predicting api it needs to be converted back to nd.array

@@ -4,7 +4,7 @@ COPY requirements.txt .
 RUN pip install --upgrade fastapi uvicorn
 RUN pip install --no-cache-dir -r requirements.txt
 COPY deployment_folder /app/deployment_folder  
-COPY config/data_pkl_files /app/config/data_pkl_files 
+COPY config /app/config 
 
 #The config folder holds all the model pkl files and data pkl files since it contains a lot of data it is gitignored
 EXPOSE 8000
