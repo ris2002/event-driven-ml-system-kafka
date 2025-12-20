@@ -8,4 +8,5 @@ COPY config /app/config
 
 #The config folder holds all the model pkl files and data pkl files since it contains a lot of data it is gitignored
 EXPOSE 8000
+
 CMD ["uvicorn", "deployment_folder.app:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -8,6 +8,7 @@ for msg in consumer:
     print(f"Topic: {msg.topic}")
     
 
+
     row=msg.value
     response=requests.post(FAST_API_URL,json={"input":row})
     print('Prediction:',response.json())

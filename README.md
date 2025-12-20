@@ -81,3 +81,4 @@ Reduces manual concatenation or errors in feature preparation.
 ## Correctios made to make Kafka work
 * The kafka converts the data to bytes it cannot read python or ndarray so it needs to be coverted to list
 * while predicting api it needs to be converted back to nd.array
+* the main error was by default the replication factor was set to 3 had to mentio it in the docker compose file 

@@ -11,6 +11,7 @@ def on_success(record_metadata):
 def on_error(excp):
     print(f"Error sending message: {excp}")
 
+
 with open('/Users/rishilboddula/Desktop/MLOPS/Fake-JOB-POSTING-MLOPS/config/x_deploy.pkl','rb') as f:
     x_test=pickle.load(f)
 producer=KafkaProducer(bootstrap_servers='localhost:9092',value_serializer=lambda v: json.dumps(v).encode('utf-8'))

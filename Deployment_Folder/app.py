@@ -10,6 +10,7 @@ mlflow.set_tracking_uri('http://host.docker.internal:5050')
 
 
 
+
 class Input_Text(BaseModel):
     input:List[float]
 
