@@ -34,6 +34,9 @@ If your column is already numeric (0/1), you usually do NOT need OHE.
 The column is already binary, so the model can use it directly.
 
 ## Column Transformer
+transformers=[
+    ('name', transformer, columns),
+]
 ColumnTransformer is a tool in scikit-learn that allows you to apply different preprocessing steps to different columns in a dataset simultaneously.
 
 Useful when your dataset has mixed data types: text, categorical, numeric.
